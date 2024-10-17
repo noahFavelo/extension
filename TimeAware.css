@@ -8,6 +8,10 @@
   background-color: lightskyblue;
 }
 
+.label {
+  color: rgba(0, 0, 0, 0.697);
+}
+
 header {
   text-align: center;
 }
@@ -26,8 +30,8 @@ header img {
 }
 
 .submit-button {
-  margin-top: 20px;
-  margin-left: 240px;
+  margin-top: 19px;
+  margin-left: 245px;
   width: 100px;
   height: 40px;
   border-radius: 8px;

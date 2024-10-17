@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "TimeAware",
-    "description": "Manage your screentime",
+    "description": "Manage your screentime, click the extension to set your preferences.",
     "version": "1.4",
     "action": {
       "default_popup": "main.html",

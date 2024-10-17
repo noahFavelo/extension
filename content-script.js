@@ -1,11 +1,9 @@
 
 let bell= new Audio("https://upload.wikimedia.org/wikipedia/commons/a/af/Taco_Bell_Bong.ogg");
    
-
 let chimes = new Audio("https://upload.wikimedia.org/wikipedia/commons/9/97/NBC_chimes.ogg");
 
 let horn = new Audio("https://upload.wikimedia.org/wikipedia/commons/1/12/WWS_Signalhorn.ogg");
-
 
 let siren = new Audio("https://upload.wikimedia.org/wikipedia/commons/4/4c/Memlow.wav")
 

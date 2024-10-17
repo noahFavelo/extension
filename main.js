@@ -7,14 +7,14 @@
     chrome.storage.local.get(['pref', 'warn', 'sound', 'dang']).then((results) => { // was for testing
       // now show the user what thier current settings are
       let aLotField = document.querySelector("#time-allotment");
-      aLotField.value = results.pref;
+      aLotField.value = (results.pref !== undefined) ? results.pref : 30;
 
       let warnField = document.querySelector("#warning");
-      warnField.value = results.warn;
+      warnField.value = (results.warn !== undefined) ? results.warn : 5;
     
 
       let soundField = document.querySelector("#select-sound");
-      soundField.value = results.sound;
+      soundField.value = (results.sound !== undefined) ? results.sound : 'none';
 
 
       let dangerField = document.querySelector('#one');
