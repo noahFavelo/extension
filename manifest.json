@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "TimeAware",
+    "description": "Manage your screentime",
+    "version": "1.4",
+    "action": {
+      "default_popup": "main.html",
+      "default_icon": "pic.png"
+    },
+    "permissions": [
+    "storage"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type":"module"
+      },
+      "content_scripts": [
+         {
+            "matches": ["<all_urls>"],
+            "js": ["content-script.js"]
+         }
+         ]
+  }

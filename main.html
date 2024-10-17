@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="TimeAware.css">
+  </head>
+  <body id="body">
+    <header class="header" id="header">
+      <img src="/images/time-aware-logo-no-background.png">
+    </header>
+    <div class="main-container" id="main-container">
+      <input type="text" placeholder="Time Allotment" id="time-allotment">
+      <input type="text" placeholder="Warning" id="warning">
+      <div class= "alert-sound">
+        <p class="paragraph">When Timer Finished:</p>
+        <select class="alert-sound-dropdown" id="select-sound">          
+          <option value="chime">Chime</option>
+          <option value="air horns">Air Horn</option>
+          <option value="bells">Bells</option>
+          <option value="siren">Siren</option>
+        </select>
+      </div>
+      <div class="forced-closed-container">
+        <p class="paragraph" id="warnDangerText"> Hard Timeout (<span id="dng" class="danger">Danger!</span>): </p>
+        <div class="toggle-border" >
+          <input id="one" type="checkbox">
+          <label for="one"><div class="handle"></div></label>
+        </div>
+      </div> <!-- end forced closed container -->
+    <button class="submit-button" id="save-button" type="submit">Save</button>
+    </div> <!-- end main container -->
+
+  <script src="main.js"></script>
+  </body>
+</html>
