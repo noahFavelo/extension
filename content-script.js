@@ -76,13 +76,13 @@ chrome.storage.local.get(['pref', 'warn', 'sound', 'dang']).then((results) => {
          //   let audio = new Audio('sound/bell.mp3');
          //   audio.play();
          if(Sound === 'bells') {
-            bell.play();
+            bell.play().catch();
          } else if(Sound === 'chime') {
-            chimes.play();
+            chimes.play().catch();
          } else if(Sound === 'air horns') {
-            horn.play();
+            horn.play().catch();
          } else if(Sound === 'siren') {
-            siren.play();
+            siren.play().catch();
          }
         
 
