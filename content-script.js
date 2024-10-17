@@ -1,4 +1,16 @@
 
+let bell= new Audio("https://upload.wikimedia.org/wikipedia/commons/a/af/Taco_Bell_Bong.ogg");
+   
+
+let chimes = new Audio("https://upload.wikimedia.org/wikipedia/commons/9/97/NBC_chimes.ogg");
+
+let horn = new Audio("https://upload.wikimedia.org/wikipedia/commons/1/12/WWS_Signalhorn.ogg");
+
+
+let siren = new Audio("https://upload.wikimedia.org/wikipedia/commons/4/4c/Memlow.wav")
+
+
+
 let time = 0;
 let TimeTillAlert;
 let WarnTime;
@@ -7,6 +19,8 @@ let Sound;
 let Dang;
 
 chrome.storage.local.get(['pref', 'warn', 'sound', 'dang']).then((results) => {
+
+
     if(results.pref === undefined) {
         TimeTillAlert = 10*60;
     } else {
@@ -63,6 +77,16 @@ chrome.storage.local.get(['pref', 'warn', 'sound', 'dang']).then((results) => {
 
          //   let audio = new Audio('sound/bell.mp3');
          //   audio.play();
+         if(Sound === 'bells') {
+            bell.play();
+         } else if(Sound === 'chime') {
+            chimes.play();
+         } else if(Sound === 'air horns') {
+            horn.play();
+         } else if(Sound === 'siren') {
+            siren.play();
+         }
+        
 
         if(Dang === true) {
                 // Kill everything

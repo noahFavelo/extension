@@ -1,6 +1,7 @@
 
 //let audio = new Audio('sound/bell.mp3');
-//  audio.play();
+ // audio.play();
+
 
   let saveButton = document.querySelector('#save-button')
   saveButton.addEventListener("click", (event) => {
@@ -23,7 +24,7 @@
 
         let soundField = document.querySelector("#select-sound");
         let SF = soundField.value;
-        if(SF === undefined) { SF = "chime"; } //give 60 second warning
+        if(SF === undefined) { SF = "none"; } //give 60 second warning
 
         let dangerField = document.querySelector('#one');
         let DF = dangerField.checked;

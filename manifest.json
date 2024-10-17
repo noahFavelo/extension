@@ -5,7 +5,7 @@
     "version": "1.4",
     "action": {
       "default_popup": "main.html",
-      "default_icon": "pic.png"
+      "default_icon": "images/time-aware-logo-no-background.png"
     },
     "permissions": [
     "storage"
