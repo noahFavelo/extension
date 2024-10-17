@@ -3,17 +3,34 @@
  // audio.play();
 
 
-  let saveButton = document.querySelector('#save-button')
-  saveButton.addEventListener("click", (event) => {
-
-      // Read it using the storage API
+    // Read it using the storage API
     chrome.storage.local.get(['pref', 'warn', 'sound', 'dang']).then((results) => { // was for testing
-        // alert("current amount is "+results.pref)
+      // now show the user what thier current settings are
+      let aLotField = document.querySelector("#time-allotment");
+      aLotField.value = results.pref;
+
+      let warnField = document.querySelector("#warning");
+      warnField.value = results.warn;
+    
+
+      let soundField = document.querySelector("#select-sound");
+      soundField.value = results.sound;
+
+
+      let dangerField = document.querySelector('#one');
+      dangerField.checked = results.dang;
+
+      // alert("current amount is "+results.pref)
         // alert("current warning is "+results.warn)
         // alert("current sound is "+results.sound)
         // alert("current danger is "+results.dang)
-      }).then( () => {
+        console.log("loaded content");
+      })
+ 
 
+
+    let saveButton = document.querySelector('#save-button')
+    saveButton.addEventListener("click", () => {
         let aLotField = document.querySelector("#time-allotment");
         let ALF = aLotField.value;
         if(ALF === '') { ALF = 10*60; } // default to ten minutes
@@ -35,7 +52,7 @@
        });
       });
 
-  });
+ 
 
 
 
